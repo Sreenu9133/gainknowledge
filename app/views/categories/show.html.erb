@@ -1,0 +1,29 @@
+<!-- <center> -->
+<!-- <#%@category.courses.each do |course| %>
+	<%#= course.id%>
+	<%#= link_to "#{course.course_name}", course_path(course.id)%><br>
+<#%end%> -->
+
+<div class="container">
+  <div class="row justify-content-center">
+    
+    <% @category.courses.each do |course|%>
+      <div class="card m-3" style="width: 18rem;">
+       <%= image_tag 'cardlogo.jpg', class:"d"%>
+        <div class="card-body" style="background-color: black;">
+          <h5 class="card-title" style="color: white;"><%= course.course_name%> </h5>
+          <p class="card-text" style="color: white;"><%= course.course_details %></p>
+          <%= link_to "see deatils", course_path(course.id), class: "btn btn-outline-primary m-1" %>
+          <%= link_to "Enroll Now", new_booking_path(course_id: course.id), class: "btn btn-outline-primary" %>
+  		</div>
+ 	 </div>
+      <br>
+    <% end %>
+</div>
+<center>;.
+<%= link_to "New Course", new_course_path, class: "btn btn-dark m-2" %>
+<%= link_to "Edit Category", edit_category_path, class: "btn btn-dark m-2" %>
+<%= link_to "Destroy", category_path(@category), data: { turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-dark m-2" %>
+<!-- </center> -->
+</center>
+</div>

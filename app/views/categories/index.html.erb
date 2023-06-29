@@ -1,0 +1,31 @@
+<marquee><h2>Welcome to Learning Management!!</h2></marquee>
+<!-- <h2>Here you will get different categories of courses:</h2> -->
+
+<!-- <div>
+  <center><h1>Courses</h1></center>
+    <#% @categories.each do |category| %>
+    <%#= link_to category.name,  category_path(category.id) %><br>
+    <#% end %>
+</div> -->
+<div class="container">
+  <div class="row justify-content-center">
+    
+
+    <% @categories.each do |category|%>
+      <div class="card m-3" style="width: 18rem;">
+       <%= image_tag 'cardlogo.jpg', class:"d"%>
+        <div class="card-body" style="background-color: black;">
+          <h5 class="card-title" style="color: white;"><%= category.name%> </h5>
+          <p class="card-text" style="color: white;"><%= category.description %></p>
+          <%= link_to "#{category.name}", category_path(category.id), class: "btn btn-outline-primary"%>
+        </div>
+      </div>
+      <br>
+    <% end %>
+      
+    
+  </div>
+  <center>
+    <%= link_to "new category", new_category_path, class: "btn btn-dark m-2" %> 
+  </center>
+</div>

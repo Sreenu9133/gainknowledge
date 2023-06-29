@@ -1,0 +1,21 @@
+<%= form_with model: category do |form| %>
+<div>
+	<%= form.label :name %>
+	<%= form.text_field :name %>
+	<% @category.errors.full_messages_for(:category_name).each do |message| %>
+	<div><%= message %></div>
+	<% end %>
+</div>
+
+<div>
+	<%= form.label :description %>
+	<%= form.text_area :description %>
+	<% @category.errors.full_messages_for(:category_name).each do |message| %>
+	<div><%= message %></div>
+	<% end %>
+</div>
+
+<div>
+	<%= form.submit %>
+</div>
+<% end %>	 

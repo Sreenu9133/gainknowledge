@@ -1,0 +1,61 @@
+.about{
+    border-width: 5px;
+    border-style: solid;
+    border-image: linear-gradient(
+        to right,
+        darkblue,
+        darkorchid
+    );
+    border-image-slice: 1;
+}
+
+
+.about:hover{
+    border-inline: 10px solid;
+    border-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        red,
+        orange,
+        rgba(0, 0, 0, 0)
+    );
+    border-image-slice: 1;
+}
+
+.signup{
+    background-image: url('signup.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.signup-page, .login-page{
+    width: 540px;
+    padding: 19px;
+    border: 2px solid white;
+    background: transparent;    
+    backdrop-filter: blur(8px);
+    margin-bottom: 30px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color: white;
+}
+
+.login{
+    background-image: url('login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.p{
+    table-layout: inherit;
+}
+
+.header{
+    background-image: url('BG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-light{
+    background-color:black ;
+}
