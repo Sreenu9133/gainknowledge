@@ -1,7 +1,40 @@
+<%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
+
+<!-- <center><h3>Here you will see the list of all the students enrolled</h3></center>
+
 <div class="container">
     <div class="row">
-      <% @bookings.each do |booking|%>
-      <%= link_to booking.first_name,booking_path(booking.id)%><br>
-      <% end %> 
+      <#% @bookings.each do |booking|%>
+      <#%= link_to booking.first_name,booking_path(booking.id)%><br>
+      <#% end %> 
     </div>
+</div> -->
+<body>
+<div class="container">
+<marquee><h2> Welcome <%= current_user.user_name %> </h2></marquee>
 </div>
+
+<div class="col col-lg-6 container"><h2 class="display-4"> My learning </h2></div>
+<section>
+  <div class="col col-lg-6 container">
+        <figure class="bg-white p-3 rounded" style="border-left: .25rem solid #f68e9d;">
+          <blockquote class="blockquote pb-2">
+            <p>
+              <h3>Learning that gets you</h3>
+              Skills for your present(and for future).Get started with us
+            </p>
+          </blockquote>
+         <!--  <figcaption class="blockquote-footer mb-0 font-italic">
+            Oprah Winfrey
+          </figcaption> -->
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="container">
+  <h2 style="background-color: white;">Lets's Start Learning, <%= current_user.user_name %></h2>
+  <h3>Here you will see your enrolled courses:</h3>
+  <h5 class="container" style="background-color: whitesmoke;"></h5>
+</div>
+</body>

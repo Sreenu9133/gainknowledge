@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :admin_users, ActiveAdmin::Devise.config
+  devise_for :users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :users
 
   root "courses#index"
   get 'courses/about'
   get 'users/home'
+  get 'bookings/homepage'
   resources :courses
   resources :users
   resources :categories

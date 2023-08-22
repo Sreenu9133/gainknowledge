@@ -10,5 +10,5 @@ class Role < ApplicationRecord
             :inclusion => { :in => Rolify.resource_types },
             :allow_nil => true
 
-
+  scopify
 end

@@ -1,9 +1,82 @@
+<%= stylesheet_link_tag "custom", "data-turbo-track": "reload" %>
 <center>
-<h1>Welcome to Learning Management!!</h1>
-<h1> Click down below courses to learn!!! </h1>
+<h1 data-text="Welcome to Learning Management">Welcome to Learning Management</h1>
 
 
-<h2><%= link_to "courses", categories_path, class: "btn btn-primary" %></h2><br>
+
+<h2><%= link_to "View Courses", categories_path, class: "btn btn-dark" %></h2><br>
 </center>
+
+<section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex align-items-center h-100">
+      <div class="col col-lg-6 mb-4 mb-lg-0">
+        <figure class="bg-white p-3 rounded" style="border-left: .25rem solid #a34e78;">
+          <blockquote class="blockquote pb-2">
+            <p>
+              Education is the one thing that no one can take away from you.
+            </p>
+          </blockquote>
+          <figcaption class="blockquote-footer mb-0 font-italic">
+            Elin Nordegren
+          </figcaption>
+        </figure>
+      </div>
+      <div class="col col-lg-6">
+        <figure class="bg-white p-3 rounded" style="border-left: .25rem solid #f68e9d;">
+          <blockquote class="blockquote pb-2">
+            <p>
+              Education is the key to unlocking the world. It is the passport to freedom.
+            </p>
+          </blockquote>
+          <figcaption class="blockquote-footer mb-0 font-italic">
+            Oprah Winfrey
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="about">
+  <%= image_tag 'cs.jpeg', width: '350', height: '300', class: "m-4" %>
+  <%= image_tag 'cs1.jpeg', width: '350', height: '300', class: "m-4" %>
+  <%= image_tag 'cs2.jpeg', width: '350', height: '300', class: "m-4" %>
+</div>
+
+
+<section class="vh-100" >
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-lg-9 col-xl-7">
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body p-5">
+
+            <div class="text-center mb-4 pb-2">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-quotes/bulb.webp"
+                alt="Bulb" width="100">
+            </div>
+
+            <figure class="text-center mb-0">
+              <blockquote class="blockquote">
+                <p class="pb-3">
+                  <i class="fas fa-quote-left fa-xs text-primary"></i>
+                  <span class="lead font-italic">Many of life's failures are people who did not realize how
+                    close they were to success when they gave up.</span>
+                  <i class="fas fa-quote-right fa-xs text-primary"></i>
+                </p>
+              </blockquote>
+              <figcaption class="blockquote-footer mb-0">
+                Thomas Edison
+              </figcaption>
+            </figure>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 

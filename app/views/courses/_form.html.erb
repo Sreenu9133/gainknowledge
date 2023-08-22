@@ -1,25 +1,27 @@
 <%= form_with model: course do |form| %>
-<div>
-	<%= form.label :course_name %><br>
-	<%= form.text_field :course_name %>
+<div class="m-2">
+	<%= form.label :course_name, class: "form-label" %><br>
+	<%= form.text_field :course_name, class: "form-control" %>
 </div>
 
-<div>
-	<%= form.label :course_details %><br>
-	<%= form.text_area :course_details %>
+<div class="m-2">
+	<%= form.label :course_details, class: "form-label" %><br>
+	<%= form.text_field :course_details, class: "form-control" %>
 </div>
 
-<div>
-	<%= form.label :course_duration %><br>
-	<%= form.text_field :course_duration %>
+<div class="m-2">
+	<%= form.label :course_duration, class: "form-label" %><br>
+	<%= form.text_field :course_duration, class: "form-control" %>
 </div>
 
-<div>
-	<%= form.label :category_id %><br>
-	<%= form.text_field :category_id %>
+<div class="m-2">
+	<%= form.label :category_id, class: "form-label" %><br>
+	<%= form.text_field :category_id, class: "form-control" %>
 </div>
 
-<div>
+<center>
+<div class="m-2">
 <%= form.submit %>
 </div>
+</center>
 <% end %>

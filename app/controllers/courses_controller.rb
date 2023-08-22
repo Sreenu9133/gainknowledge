@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
 	end 
 
 	def show
-		@courses = Course.paginate(page: params[:page], per_page: 5)
+		# @courses = Course.paginate(page: params[:page], per_page: 5)
 		@course = Course.find_by_id(params[:id])
 	end
 

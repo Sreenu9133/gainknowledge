@@ -7,9 +7,9 @@ class BookingsController < ApplicationController
   end
 
   def show
-    # @booking = Booking.find_by_id(params[:id])
+    @booking = Booking.all
     # @course = Course.find(params[:id])
-    @booking = Booking.find(params[:id])
+    @booking = Booking.find_by_id(params[:id])
   end
 
   def new
@@ -21,7 +21,8 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     if @booking.save
-      redirect_to bookings_path
+      CrudNotificationMailer.create_notification(@booking).deliver_now
+      redirect_to bookings_url
     else
       render :new, status: :unprocessable_entity
     end

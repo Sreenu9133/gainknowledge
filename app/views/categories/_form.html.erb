@@ -1,21 +1,23 @@
 <%= form_with model: category do |form| %>
-<div>
-	<%= form.label :name %>
-	<%= form.text_field :name %>
+<div class="m-2">
+	<%= form.label :name, class: "form-label"%>
+	<%= form.text_field :name, class: "form-control" %>
 	<% @category.errors.full_messages_for(:category_name).each do |message| %>
 	<div><%= message %></div>
 	<% end %>
 </div>
 
-<div>
-	<%= form.label :description %>
-	<%= form.text_area :description %>
+<div class="m-2">
+	<%= form.label :description, class: "form-label" %>
+	<%= form.text_area :description, class: "form-control" %>
 	<% @category.errors.full_messages_for(:category_name).each do |message| %>
 	<div><%= message %></div>
 	<% end %>
 </div>
 
-<div>
+<center>
+<div class="m-2">
 	<%= form.submit %>
 </div>
+</center>
 <% end %>	 

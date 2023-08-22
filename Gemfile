@@ -81,16 +81,19 @@ gem "devise"
 #Adding bootstrap gem
 gem "cssbundling-rails"
 
-#Adding roles to users
-gem "rolify"
-
 #Adding gem to provide ability
 gem "cancancan"
 
 #Gem for pagination
-gem "will_paginate"
+# gem "will_paginate"
 
-#Gem for active ADMIN
+#Gem for role
+gem 'rolify'
+
+#Gem for active admin
 gem 'activeadmin'
 
-gem 'sass-rails'
+gem 'sassc'
+
+#gem for background jobs
+gem 'sidekiq', '~>6.5.9'

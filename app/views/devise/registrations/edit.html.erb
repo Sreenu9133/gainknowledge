@@ -39,8 +39,8 @@
   </div>
 
   <div class="m-4 field form-group">
-    <%= f.label :role_id %><br/>
-    <%= f.select(:role_id, Role.pluck(:name), {}, {class: "form-select"}) %>
+    <%= f.label :role_ids %><br/>
+    <%= f.select(:role_ids, Role.pluck(:name), {}, {class: "form-select"}) %>
   </div>
 
   <div class="m-4 actions">
