@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
     # @booking = Booking.find(params[:id])
 
     # @course = Course.find(params[:id])
+    Booking.booking_count
   end
 
   def show
