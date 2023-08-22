@@ -4,7 +4,6 @@ class BookingsController < ApplicationController
     # @booking = Booking.find(params[:id])
 
     # @course = Course.find(params[:id])
-    Booking.booking_count
   end
 
   def show
@@ -22,6 +21,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     if @booking.save
+      puts "++++++++++#{@booking.booking_count}++++++++++"
       CrudNotificationMailer.create_notification(@booking).deliver_now
       redirect_to bookings_url
     else
